@@ -1,14 +1,16 @@
-import { useState } from 'react'
 
-import './App.css'
+import Body from './Components/Body'
+import Browse from "./Components/Browse"
+import {Provider} from "react-redux"
+import appStore from './utils/appStore'
 
 function App() {
-  
 
   return (
-    <div className='text-3xl text-center font-bold text-green-800' >
-      <h1>Namaste everyone!! lets build netflix gpt</h1>
-    </div>
+  <Provider store={appStore}>
+     <Body/>
+  </Provider>
+  
   )
 }
 
